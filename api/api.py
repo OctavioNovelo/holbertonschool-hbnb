@@ -4,7 +4,7 @@ from flask import jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/hbnb/api')
 def home():
     return "Welcome to HBnB"
 
