@@ -1,9 +1,11 @@
-from flask import Flask, jsonify, request
+#!/usr/bin/python3
+from flask import Flask, jsonify, request, abort
+
+app = Flask(__name__)
 
 @app.route('/')
 def root():
     return "root"
 
-app = Flask(__name__)
 if __name__ == "__main__":
-    app.run(debug=True)
+        app.run(host='0.0.0.0', port=5000, debug=True)
