@@ -33,3 +33,5 @@ class Place(BaseModel):
         self.amenities = []
         self.reviews = []
 
+class Amenities(BaseModel):
+    def __init__(self, amenities)
