@@ -2,6 +2,12 @@
 import uuid
 from datetime import datetime
 
+"""A los atributos que inicializan una lista, hay que ponerles metodos para unir tipo:
+def add_amenity(self, amenity):
+        self.amenities.append(amenity)
+
+para que funcione la lista"""
+
 class BaseModel:
     def __init__(self):
         self.id = str(uuid.uuid4())
@@ -31,7 +37,23 @@ class Place(BaseModel):
         self.price_per_night = price_per_night
         self.max_guests = max_guests
         self.amenities = []
+        """No tengo idea si este reviews va aqui o se qutia ya que hay una clase para eso y no se si hara conlficto o que onda"""
         self.reviews = []
 
 class Amenities(BaseModel):
-    def __init__(self, amenities)
+    def __init__(self, amenities):
+        super().__init__)
+        self.amenities = []
+
+"""Aqui esta el otro sin contar que aqui review recibe mas valores"""
+class Review(BaseModel):
+    def __init__(self, stars, review):
+        super().__init__)
+        self.stars = stars
+        self.review = []
+
+class City(BaseModel):
+    def __init__(self, name, country):
+        super().__init__)
+        self.country = country
+        self.name = name
